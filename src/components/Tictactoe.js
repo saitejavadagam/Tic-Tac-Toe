@@ -13,10 +13,15 @@ export default function Tictactoe() {
         newBoard[index] = isXNext ? 'X':'O'
         setBoard(newBoard)
         const win = checkwinner(newBoard)
-        if(win)setWinner(win)
-        else setIsXNext(!isXNext)
-
-        if(!newBoard.includes(null))setWinner('Draw')
+        if(win){
+            setWinner(win)
+        }
+        else if(!newBoard.includes(null)){
+            setWinner('Draw')
+        }
+        else {
+            setIsXNext(!isXNext)
+        }
     }
 
     const checkwinner = (board)=>{
