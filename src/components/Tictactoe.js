@@ -55,6 +55,7 @@ export default function Tictactoe() {
         </div>
         {winner && <div className='winner'>
             {winner==="Draw"?"Draw":"Winner: "+winner}
+            <div style={{position:'absolute',bottom:'30px',fontSize:'1.2em'}}><i className='fa fa-refresh refresh-btn' onClick={()=>{window.location.reload()}}></i></div>
             </div>}
     </div>
   )

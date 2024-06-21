@@ -54,7 +54,18 @@
     margin-top: 20px;
     font-size: 3em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+  }
+
+  .refresh-btn:hover {
+    color: greenyellow;
+    animation: rotates 1s ease-in-out;
+  }
+
+  @keyframes rotates {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
   }
